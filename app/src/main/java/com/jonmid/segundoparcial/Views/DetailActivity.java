@@ -39,6 +39,7 @@ public class DetailActivity extends AppCompatActivity {
     TextView textView2;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
