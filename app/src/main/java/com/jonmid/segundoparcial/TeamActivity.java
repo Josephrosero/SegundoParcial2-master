@@ -37,8 +37,6 @@ public class TeamActivity extends AppCompatActivity {
         progressBar = (ProgressBar) findViewById(R.id.id_pb_progressbar);
         recyclerView = (RecyclerView) findViewById(R.id.id_rv_recyclerview);
 
-
-
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
 
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);

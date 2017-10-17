@@ -42,7 +42,8 @@
             android:layout_height="wrap_content"
             android:text="@string/str_btn_return"
             android:layout_marginTop="50dp"
-            android:layout_alignParentBottom="true"/>
+            android:layout_alignParentBottom="true"
+            android:onClick="regesar"/>
 
     </RelativeLayout>
 

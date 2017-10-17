@@ -9,9 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.jonmid.segundoparcial.Array.Images;
 import com.jonmid.segundoparcial.Model.TeamModelJosephRosero;
 import com.jonmid.segundoparcial.R;
 import com.jonmid.segundoparcial.Views.DetailActivity;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,7 @@ public class TeamAdapterJosephRosero  extends RecyclerView.Adapter<TeamAdapterJo
 
         holder.id.setText(usersList.get(position).getName());
         holder.name.setText(usersList.get(position).getCode());
+        Picasso.with(context).load(Images.imageRandom()).into(holder.image);
 
 
     }
@@ -56,8 +59,6 @@ public class TeamAdapterJosephRosero  extends RecyclerView.Adapter<TeamAdapterJo
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView id;
         TextView name;
-
-        TextView address;
         ImageView image;
 
 
@@ -80,6 +81,8 @@ public class TeamAdapterJosephRosero  extends RecyclerView.Adapter<TeamAdapterJo
             Intent intent = new Intent(context, DetailActivity.class);
             intent.putExtra("name", usersList.get(getLayoutPosition()).getName());
             intent.putExtra("code", usersList.get(getLayoutPosition()).getCode());
+            intent.putExtra("crestUrl", usersList.get(getLayoutPosition()).getCresUrl());
+
             contextItem.startActivity(intent);
         }
     }
